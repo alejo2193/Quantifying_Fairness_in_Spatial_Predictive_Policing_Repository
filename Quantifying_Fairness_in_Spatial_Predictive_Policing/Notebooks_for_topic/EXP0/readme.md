@@ -1,7 +1,7 @@
 
 # Code for "Quantifying Fairness in Spatial Predictive Policing"
 
-This repository contains the code used to develop the paper **"Quantifying Fairness in Spatial Predictive Policing"**. The algorithms used in this work include **SEPP**, **KDE**, and **Naive KDE**, implemented using code developed by the **QuantCrime Lab** at the University of Leeds. The code is available at: [QuantCrime GitHub](https://github.com/QuantCrimAtLeeds/PredictCode).
+This repository contains the code used to develop the paper **"Quantifying Fairness in Spatial Predictive Policing"**. The algorithms used in this work include **SEPP**, **KDE**, and **Naive KDE**, implemented using code developed by the **QuantCrime Lab** at the University of Leeds. The code is available at: [QuantCrime GitHub](https://github.com/alejo2193/Quantifying_Fairness_in_Spatial_Predictive_Policing_Repository).
 
 ## Project Structure
 
@@ -34,13 +34,7 @@ This project has the following directory structure and stores the following info
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/QuantifyingFairness.git
-   ```
-
-2. **Install dependencies**:
-   Make sure you have Python 3.x installed, then install the required libraries:
-   ```bash
-   pip install -r requirements.txt
+   git clone https://github.com/alejo2193/Quantifying_Fairness_in_Spatial_Predictive_Policing_Repository
    ```
 
 ## Running the Code
@@ -52,7 +46,7 @@ To replicate the experiments and results from the paper, follow these steps:
 
 For example, to process the data for **Bogota**, you can run:
 ```bash
-jupyter notebook scripts/organize_data_bogota.ipynb
+jupyter notebook scripts/"6. Data Real Bogota.ipynb"
 ```
 
 Then, use the subsequent scripts for model training and evaluation.
@@ -65,35 +59,18 @@ The images and results for each city (Bogota and Chicago) are saved under the re
 - Predicted crime maps.
 - Model performance metrics.
 
-### Example output
-
-When running the code, you will see results similar to:
-```plaintext
-[INFO] Fairness metrics for Naive KDE model: [metric_values]
-[INFO] Predicted crime density map saved to 'RESULTADOS/Bogota/naive_predicted.png'
-```
-
-## Contributing
-
-If you wish to contribute to this repository or improve the code, please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-name`).
-3. Make your changes and commit them.
-4. Push your changes and submit a pull request with a description of your modifications.
-
 ## License
 
 This code is licensed under the **MIT License**. See the `LICENSE` file for more details.
 
 ## References
 
-- [QuantCrime Lab GitHub Repository](https://github.com/QuantCrimAtLeeds/PredictCode).
+- [QuantCrime Lab GitHub Repository](https://github.com/alejo2193/Quantifying_Fairness_in_Spatial_Predictive_Policing_Repository).
 - **"Quantifying Fairness in Spatial Predictive Policing"** (Paper link or citation).
 
 ## Contact
 
 If you have any questions about the code or the paper, feel free to contact:
 
-- Email: your-email@domain.com
-- GitHub: [your-username](https://github.com/your-username)
+- Email: dieahernandezcas@unal.edu.co
+- GitHub: [alejo2193](https://github.com/alejo2193)
