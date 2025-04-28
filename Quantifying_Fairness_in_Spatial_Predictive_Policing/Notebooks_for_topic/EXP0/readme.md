@@ -1,7 +1,7 @@
 
 # Code for "Quantifying Fairness in Spatial Predictive Policing"
 
-This repository contains the code used to develop the paper **"Quantifying Fairness in Spatial Predictive Policing"**. The algorithms used in this work include **SEPP**, **KDE**, and **Naive KDE**, implemented using code developed by the **QuantCrime Lab** at the University of Leeds. The code is available at: [QuantCrime GitHub](https://github.com/alejo2193/Quantifying_Fairness_in_Spatial_Predictive_Policing_Repository).
+This repository contains the code used to develop the paper **"Quantifying Fairness in Spatial Predictive Policing"**. The algorithms used in this work include **SEPP**, **KDE**, and **Naive KDE**, implemented using code developed by the **QuantCrime Lab** at the University of Leeds. The code is available at: [QuantCrime GitHub](https://github.com/QuantCrimAtLeeds/PredictCode).
 
 ## Project Structure
 
