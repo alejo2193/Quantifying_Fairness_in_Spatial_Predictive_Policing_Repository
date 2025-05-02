@@ -169,7 +169,3 @@ This project is licensed under the **MIT License**. See the `LICENSE` file in th
 ## Contact
 
 If you have questions, comments, or suggestions about this project or the paper, please contact:
-
-* **Author:** Diego Alejandro Hernandez Castaneda
-* **Email:** dieahernandezcas@unal.edu.co
-* **GitHub:** [alejo2193](https://github.com/alejo2193) ([https://github.com/alejo2193](https://github.com/alejo2193))
