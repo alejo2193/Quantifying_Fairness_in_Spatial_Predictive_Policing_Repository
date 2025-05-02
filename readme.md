@@ -41,16 +41,14 @@ The project directory structure is organized as follows to manage data, scripts,
 
 ```
 .
-├── Notebooks_for_topics/ # Data analysis, experimentation scripts, and article data
-│   ├── Bogota/
-│   └── Chicago/
+├── Experiment_Scripts/ # Experimental scripts with real data from Bogota and Chicago (Jupyter Notebooks)
 ├── Librerias/          # Custom libraries and functions
-│   ├── models/
 │   ├── fairness_measures/
-│   ├── optimization/
-│   ├── poisson/
-│   └── spatial_simulation/
-├── DATOS/              # Stores all raw, processed data, and results (as described in previous README)
+│   ├── model/
+│   ├── predictCode/    # Base code from University of Leeds
+│   └── robust_predict/
+├── Examples/           # Examples demonstrating model usage based on simulations
+├── Data/               # Stores all raw, processed data, and results
 │   ├── BOGOTA/
 │   └── CHICAGO/
 ├── global_vars.py      # Global configuration variables
@@ -60,13 +58,19 @@ The project directory structure is organized as follows to manage data, scripts,
 
 ```
 
-* **Notebooks_for_topics:** This folder stores data analysis scripts, experimentation code, and the specific datasets used for the scientific article. You will find Jupyter notebooks here that detail the step-by-step process, including data loading, preprocessing, model application, and results analysis. These notebooks also serve as examples demonstrating how to use the custom libraries and functionalities developed for this project.
+* **Experiment_Scripts:** This folder contains the experimental scripts using real data from Bogota and Chicago. These are primarily Jupyter notebooks (`.ipynb`) located directly within this folder, without subdirectories for cities.
 
-* **Librerias:** This folder contains the source code for custom libraries and functions developed for the project. These modules include code for training predictive models, calculating model fit metrics, and evaluating fairness and performance.
+* **Librerias:** This folder stores the code for custom libraries and functions developed for training models and calculating model fit metrics for fairness and performance. These are global libraries used for simulated data, as well as real data from Bogota and Chicago. It contains the following subdirectories:
+    * `fairness_measures/`
+    * `model/`
+    * `predictCode/` (Base code developed by the University of Leeds)
+    * `robust_predict/`
 
-    A significant part of the code in this folder utilizes and extends the `open_cp` library, originally developed by the **QuantCrime Lab** at the University of Leeds. For more detailed information about the base `open_cp` library, please refer to their GitHub repository: [QuantCrime Lab GitHub](https://github.com/QuantCrimAtLeeds/PredictCode).
+* **Examples:** This folder contains examples demonstrating how the implemented models work based on simulations. These examples are likely provided as Jupyter notebooks or scripts.
 
-* **DATOS/**: (As described in the previous README) Contains all necessary data to run the scripts, including raw, intermediate, and generated results (predictions, metrics, images).
+* **Data/**: (Renamed from DATOS) Contains all necessary data to run the scripts, including raw, intermediate, and generated results (predictions, metrics, images). It is further organized by city.
+
+* **global_vars.py**: Defines global parameters and configurations used across various notebooks and scripts.
 
 ## Installation
 
@@ -86,14 +90,13 @@ Ensure you have the following installed:
 1.  **Clone the repository:** Open your terminal or command prompt and run:
 
     ```bash
-    git clone [https://github.com/your_username/your_repository_name.git](https://github.com/your_username/your_repository_name.git)
+    git clone [https://github.com/alejo2193/Quantifying_Fairness_in_Spatial_Predictive_Policing_Repository.git](https://github.com/alejo2193/Quantifying_Fairness_in_Spatial_Predictive_Policing_Repository.git)
     ```
-    (Replace `your_username/your_repository_name` with the actual repository path).
 
 2.  **Navigate to the project directory:**
 
     ```bash
-    cd your_repository_name
+    cd Quantifying_Fairness_in_Spatial_Predictive_Policing_Repository
     ```
 
 3.  **Create a virtual environment (recommended):** It's a good practice to use virtual environments to manage project dependencies.
@@ -122,9 +125,9 @@ Ensure you have the following installed:
 
 ## Running the Code
 
-To replicate the experiments and results from the paper, you must execute the Jupyter notebooks in the `Notebooks_for_topics/` folder in the appropriate sequence. The structure is organized by city, so you will generally follow the notebooks within `Notebooks_for_topics/Bogota/` or `Notebooks_for_topics/Chicago/`.
+To replicate the experiments and results from the paper, you must execute the Jupyter notebooks in the `Experiment_Scripts/` folder in the appropriate sequence.
 
-1.  **Inicia Jupyter Notebook or JupyterLab:** Open your terminal in the project root (with the virtual environment activated) and run:
+1.  **Start Jupyter Notebook or JupyterLab:** Open your terminal in the project root (with the virtual environment activated) and run:
 
     ```bash
     jupyter notebook
@@ -132,19 +135,19 @@ To replicate the experiments and results from the paper, you must execute the Ju
     # jupyter lab
     ```
 
-2.  **Navigate to the `Notebooks_for_topics/` folder** in the Jupyter interface.
+2.  **Navigate to the `Experiment_Scripts/` folder** in the Jupyter interface.
 
-3.  **Execute the notebooks in order** for the city of interest. Follow the sequence indicated by numbering or logical flow within the respective city subfolders.
+3.  **Execute the notebooks in order** as per the workflow described in the paper or the notebooks themselves.
 
-Ensure that the output directories specified in the scripts (within `DATOS/`) exist before running cells that save files.
+Ensure that the output directories specified in the scripts (within `Data/`) exist before running cells that save files.
 
 ## Usage Examples
 
-Examples demonstrating the use of each custom library and functionality are provided within the scripts located in the **Notebooks_for_topics** folder. The README files within those specific topic directories or the notebooks themselves will guide you through the necessary steps and provide practical usage examples.
+Examples demonstrating the use of the implemented models based on simulations are provided within the **Examples** folder. These examples serve as practical guides for understanding how the models function.
 
 ## Results
 
-The results generated by the notebooks, including tables of metrics, visualizations, and saved predictions, are stored in the `DATOS/` folder structure, typically within `DATOS/BOGOTA/RESULTADOS/`, `DATOS/CHICAGO/RESULTADOS/`, and potentially a consolidated `DATOS/RESULTADOS/` folder.
+The results generated by the notebooks, including tables of metrics, visualizations, and saved predictions, are stored in the `Data/` folder structure, typically within `Data/BOGOTA/RESULTADOS/`, `Data/CHICAGO/RESULTADOS/`, and potentially a consolidated `Data/RESULTADOS/` folder.
 
 These results allow examining:
 
