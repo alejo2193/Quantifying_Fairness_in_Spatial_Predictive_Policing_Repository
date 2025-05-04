@@ -68,7 +68,7 @@ The project directory structure is organized as follows to manage data, scripts,
 
 * **Examples:** This folder contains examples demonstrating how the implemented models work based on simulations. These examples are likely provided as Jupyter notebooks or scripts.
 
-* **Data/**: (Renamed from DATOS) Contains all necessary data to run the scripts, including raw, intermediate, and generated results (predictions, metrics, images). It is further organized by city.
+* **Data/**: Contains all necessary data to run the scripts, including raw, intermediate, and generated results (predictions, metrics, images). It is further organized by city.
 
 * **global_vars.py**: Defines global parameters and configurations used across various notebooks and scripts.
 
@@ -121,7 +121,7 @@ Ensure you have the following installed:
     pip install -r requirements.txt
     ```
 
-    (Make sure to generate a `requirements.txt` file listing all project dependencies, for example, `pandas`, `numpy`, `geopandas`, `shapely`, `dateutil`, `sklearn`, `tqdm`, `open_cp`, `scipy`, `cvxpy`, `sparse`, `matplotlib`, `plotly`, `pickle`). You can generate it automatically if you already have the dependencies installed in an environment: `pip freeze > requirements.txt`).
+    You can generate it automatically if you already have the dependencies installed in an environment: `pip freeze > requirements.txt`.
 
 ## Running the Code
 
@@ -158,13 +158,12 @@ These results allow examining:
 
 ## License
 
-This project is licensed under the **MIT License**. See the `LICENSE` file in the repository root for full details.
+This project is licensed under the **MIT License**.
 
 ## References
 
 * **Paper:** "Quantifying Fairness in Spatial Predictive Policing" (Include link or full citation to the paper when available).
 * **open_cp base code:** QuantCrime Lab at the University of Leeds repository: [https://github.com/QuantCrimAtLeeds/PredictCode](https://github.com/QuantCrimAtLeeds/PredictCode).
-* Other relevant works or datasets (if applicable).
 
 ## Contact
 

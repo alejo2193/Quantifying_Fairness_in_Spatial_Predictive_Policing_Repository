@@ -1,0 +1,15 @@
+pandas
+numpy
+geopandas
+shapely
+python-dateutil # Name for dateutil package
+scikit-learn # Name for sklearn package
+tqdm
+open_cp
+scipy
+cvxpy
+sparse
+matplotlib
+plotly
+jupyterlab
+seaborn
