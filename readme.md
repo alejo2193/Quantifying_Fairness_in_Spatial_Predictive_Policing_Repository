@@ -8,7 +8,7 @@
 
 Fairness pipeline for Prediction Fairness (PF) and  Resource Allocation Fairness (RAF): it starts by defining evaluation groups and comparing predicted and actual crime probabilities. Selected areas are analyzed under resource constraints. PF metrics are computed using error functions, such as f(M, G1*) = |0.5 - 0.0| = 0.5, and disparities are measured using Max-min and Gini. RAF fairness is then assessed through precision metrics derived from confusion matrices, e.g., precision(M, G1*) = 0, precision(M, G2*) = 1.
 
-</div>
+
 
 
 ![Status Badge](https://img.shields.io/badge/Status-In%20Development-yellow) ![License Badge](https://img.shields.io/badge/License-MIT-blue) ![Version Badge](https://img.shields.io/badge/Version-1.0.0-informational)
@@ -179,3 +179,4 @@ This project is licensed under the **MIT License**.
 ## Contact
 
 If you have questions, comments, or suggestions about this project or the paper, please contact:
+</div>
