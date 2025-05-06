@@ -6,22 +6,7 @@
 
 <div align="justify">
 
-
-The proposed fairness pipeline in Prediction Fairness (PF) and Resource Allocation Fairness (RAF) begins with defining the groups of interest for evaluation, followed by assessing the probability of crime occurrence in predictions and ground truth. Subsequently, the decision-maker restricts and selects analysis areas based on resource constraints. PF is then evaluated using profit functions, comparing result values in each group with the ground truth. 
-
-For example, in group 1, if the prediction value is 0.5 and the ground truth is 0, then:  
-f(M, G1*) = |0.5 - 0.0| = 0.5
-
-Similarly, in group 2, if the prediction value is 0.3 and the ground truth is 0.5:  
-f(M, G2*) = |0.3 - 0.5| = 0.2
-
-This allows the calculation of PF metrics such as:  
-Max-min(M, G1*, G2*) = |0.5 - 0.2| = 0.3  
-Gini(M, G1*, G2*) = |0.5 - 0.2| / (0.5 + 0.2) = 0.43
-
-Finally, RAF is calculated based on the selected areas. If the prediction is greater than 0, patrolling should occur — and similarly for the ground truth. Based on the classification into patrol and no-patrol, a confusion matrix is constructed. The precision values derived from this matrix serve as fairness metrics. For example:  
-precision(M, G1*) = 0  
-precision(M, G2*) = 1
+Fairness pipeline for Prediction Fairness (PF) and  Resource Allocation Fairness (RAF): it starts by defining evaluation groups and comparing predicted and actual crime probabilities. Selected areas are analyzed under resource constraints. PF metrics are computed using error functions, such as f(M, G1*) = |0.5 - 0.0| = 0.5, and disparities are measured using Max-min and Gini. RAF fairness is then assessed through precision metrics derived from confusion matrices, e.g., precision(M, G1*) = 0, precision(M, G2*) = 1.
 
 </div>
 
