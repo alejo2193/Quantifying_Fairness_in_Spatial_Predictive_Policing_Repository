@@ -1,7 +1,7 @@
 # Quantifying Fairness in Spatial Predictive Policing
 
 <div style="background-color: white; display: inline-block; padding: 10px;">
-  <img src="fig2.png" alt="Figura 2" width="800"/>
+  <img src="fig2.png" alt="Figura 2" width="600"/>
 </div>
 
 <div align="justify">
