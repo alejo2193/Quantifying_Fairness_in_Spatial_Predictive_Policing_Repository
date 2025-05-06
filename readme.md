@@ -1,14 +1,29 @@
 # Quantifying Fairness in Spatial Predictive Policing
 
-## Abstract
-
-Predictive policing leverages data-driven models to anticipate future criminal events and guide law enforcement strategies. However, concerns about algorithmic fairness have emerged, as these models risk perpetuating discrimination and inequities, particularly among vulnerable populations. While prior research has acknowledged the influence of disparities in crime reporting levels on these models, the extent of their impact on vulnerable populations remains insufficiently understood, posing a critical challenge in societies marked by high disparities. This study seeks to quantify the fairness of three prevalent density probability estimation models used in predictive security. Specifically, it examines their capacity to distribute benefits impartially across diverse populations in various spatial contexts. Real-world theft data were employed to calibrate three distinct predictive models, followed by the quantification of model fairness through two different measurement approaches. These measurements assess disparities in the granting of model benefits between two geographical areas-one focusing on the average prediction error benefit and the other on the utilization of the model for resource allocation. Results suggest that the predictive security models studied may be fair for the prediction but unfair over the use of the model for patrol allocation, with a maximum difference between the means of groups of $45\%$ and an average of these differences of $12\%$. This highlights the nuanced nature of fairness considerations within predictive policing frameworks.
-
-![Figura 2](fig2.png)
+<div style="background-color: white; display: inline-block; padding: 10px;">
+  <img src="fig2.png" alt="Figura 2" width="600"/>
+</div>
 
 <div align="justify">
 
-**Figura 2.** Proposed fairness pipeline in PF and RAF begins with defining the groups of interest for evaluation, followed by assessing the probability of crime occurrence in predictions and ground truth. Subsequently, the decision-maker restricts and selects analysis areas based on resource constraints. PF are then evaluated using profit functions, comparing result values in each group with the ground truth, e.g., in group 1, if prediction value is 0.5 and reality is 0, then $f(M,G_{1}^*)=|0.5-0.0|=0.5$, and similarly, $f(M,G_{2}^*)=|0.3-0.5|=0.2$. This allows calculation of PF metrics like $Max$-$min(M*_*_
+
+The proposed fairness pipeline in Prediction Fairness (PF) and Resource Allocation Fairness (RAF) begins with defining the groups of interest for evaluation, followed by assessing the probability of crime occurrence in predictions and ground truth. Subsequently, the decision-maker restricts and selects analysis areas based on resource constraints. PF is then evaluated using profit functions, comparing result values in each group with the ground truth. 
+
+For example, in group 1, if the prediction value is 0.5 and the ground truth is 0, then:  
+f(M, G1*) = |0.5 - 0.0| = 0.5
+
+Similarly, in group 2, if the prediction value is 0.3 and the ground truth is 0.5:  
+f(M, G2*) = |0.3 - 0.5| = 0.2
+
+This allows the calculation of PF metrics such as:  
+Max-min(M, G1*, G2*) = |0.5 - 0.2| = 0.3  
+Gini(M, G1*, G2*) = |0.5 - 0.2| / (0.5 + 0.2) = 0.43
+
+Finally, RAF is calculated based on the selected areas. If the prediction is greater than 0, patrolling should occur — and similarly for the ground truth. Based on the classification into patrol and no-patrol, a confusion matrix is constructed. The precision values derived from this matrix serve as fairness metrics. For example:  
+precision(M, G1*) = 0  
+precision(M, G2*) = 1
+
+</div>
 
 
 ![Status Badge](https://img.shields.io/badge/Status-In%20Development-yellow) ![License Badge](https://img.shields.io/badge/License-MIT-blue) ![Version Badge](https://img.shields.io/badge/Version-1.0.0-informational)
