@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quantifying Fairness in Spatial Predictive Policing</title>
-    <link rel="stylesheet" href="style.css"> <style>
+    <style>
         body {
             font-family: sans-serif;
             line-height: 1.6;
-            margin: 0; /* Quitar margen por defecto del body */
-            padding: 0; /* Quitar padding por defecto del body */
+            margin: 0;
+            padding: 0;
             background-color: #f4f4f4;
             color: #333;
         }
-        .top-bar { /* Barra superior para el título y enlace al repo */
+        .top-bar {
             background-color: #333;
             color: white;
             padding: 15px 30px;
@@ -26,7 +26,7 @@
         }
         .container {
             max-width: 900px;
-            margin: 20px auto; /* Margen arriba/abajo y centrado horizontal */
+            margin: 20px auto;
             background: white;
             padding: 25px;
             border-radius: 8px;
@@ -34,12 +34,12 @@
         }
         h2, h3 {
             color: #333;
-            border-bottom: 1px solid #eee; /* Línea sutil bajo los subtítulos */
+            border-bottom: 1px solid #eee;
             padding-bottom: 5px;
         }
-        .image-container {
+        .image-container { /* Estilo para la imagen principal (fig2) */
             background-color: white;
-            display: block; /* Centrado más fácil */
+            display: block;
             padding: 10px;
             text-align: center;
             margin-bottom: 20px;
@@ -47,11 +47,11 @@
         .image-container img {
             max-width: 100%;
             height: auto;
-            border: 1px solid #ddd; /* Borde sutil para la imagen */
+            border: 1px solid #ddd;
             border-radius: 4px;
         }
         .badges {
-            text-align: center; /* Centrar badges */
+            text-align: center;
             margin-bottom: 15px;
         }
         .badges img {
@@ -63,7 +63,7 @@
         }
         .repo-link {
             display: inline-block;
-            background-color: #007bff; /* Azul GitHub */
+            background-color: #007bff;
             color: white;
             padding: 10px 20px;
             text-decoration: none;
@@ -72,14 +72,14 @@
             transition: background-color 0.3s ease;
         }
         .repo-link:hover {
-            background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+            background-color: #0056b3;
             color: white;
         }
         .justify-text {
             text-align: justify;
         }
         pre {
-            background-color: #f9f9f9; /* Un gris más claro para el código */
+            background-color: #f9f9f9;
             padding: 15px;
             border-radius: 5px;
             overflow-x: auto;
@@ -87,7 +87,7 @@
         }
         code {
             font-family: monospace;
-            background-color: #eef; /* Color de fondo sutil para código inline */
+            background-color: #eef;
             padding: 2px 4px;
             border-radius: 3px;
         }
@@ -109,8 +109,70 @@
             text-decoration: underline;
         }
         section {
-            margin-bottom: 30px; /* Más espacio entre secciones */
+            margin-bottom: 30px;
         }
+
+        /* --- Estilos para los videos --- */
+        .videos-results-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+            margin-bottom: 30px; /* Espacio después de los videos */
+        }
+        .video-item {
+            flex-basis: 48%;
+            max-width: 48%;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .video-item video {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        .video-item p {
+            margin-top: 8px;
+            font-size: 0.9em;
+            color: #555;
+        }
+        @media (max-width: 768px) {
+            .video-item {
+                flex-basis: 100%;
+                max-width: 100%;
+            }
+        }
+        /* --- Fin de estilos para los videos --- */
+
+        /* --- Estilos para las Figuras Adicionales en Resultados --- */
+        .figure-item {
+            margin-top: 25px;
+            margin-bottom: 25px;
+            text-align: center; /* Centra la imagen */
+        }
+        .figure-item img {
+            max-width: 80%; /* Ajusta según el tamaño deseado para las figuras */
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 10px; /* Espacio entre imagen y caption */
+            display: block; /* Necesario para que margin auto funcione para centrar si tiene un max-width menor al 100% */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .figure-caption {
+            font-size: 0.9em;
+            color: #555;
+            text-align: justify; /* Justificar texto de la descripción */
+            max-width: 750px; /* Ancho máximo para la descripción, ayuda a la legibilidad */
+            margin-left: auto; /* Centra el bloque de texto si es más angosto que el contenedor */
+            margin-right: auto;
+            padding: 0 15px; /* Un poco de padding lateral para que no pegue a los bordes en viewports pequeños */
+        }
+        /* --- Fin de estilos para Figuras Adicionales --- */
+
     </style>
 </head>
 <body>
@@ -122,7 +184,7 @@
     <div class="container">
 
         <div class="image-container">
-          <img src="fig2.png" alt="Figura 2" width="700"/>
+          <img src="Images/fig2.png" alt="Figura 2" width="700"/>
         </div>
 
         <div class="badges">
@@ -133,7 +195,7 @@
 
         <div class="repo-link-container">
             <a href="https://github.com/alejo2193/Quantifying_Fairness_in_Spatial_Predictive_Policing_Repository" target="_blank" class="repo-link">
-                Ver Repositorio en GitHub
+                See Repository in GitHub
             </a>
         </div>
 
@@ -152,7 +214,7 @@
                 <li><a href="#results">Results</a></li>
                 <li><a href="#references">References</a></li>
                 <li><a href="#contact">Contact</a></li>
-                </ul>
+            </ul>
         </nav>
 
         <section id="about-the-project">
@@ -167,7 +229,7 @@
             <h2>Algorithms Used</h2>
             <div class="justify-text">
                 <p>The predictive algorithms implemented are <strong>SEPP</strong>, <strong>KDE</strong>, and <strong>Naive KDE</strong>. These models were implemented using base code developed by the <strong>QuantCrime Lab</strong> at the University of Leeds, available at: <a href="https://github.com/QuantCrimAtLeeds/PredictCode" target="_blank">https://github.com/QuantCrimAtLeeds/PredictCode</a>.</p>
-                </div>
+            </div>
         </section>
 
         <section id="project-structure">
@@ -181,19 +243,47 @@
 ├── global_vars.py      
 └── README.md</code></pre>
             <p class="justify-text">For a detailed breakdown of each folder and its contents, please refer to the <a href="https://github.com/alejo2193/Quantifying_Fairness_in_Spatial_Predictive_Policing_Repository/blob/main/README.md#project-structure" target="_blank">Project Structure section in the README.md</a>.</p>
-            </section>
+        </section>
 
         <section id="installation">
             <h2>Installation</h2>
             <p class="justify-text">To set up the project locally, ensure you have Python 3.7+, pip, and git. Then, clone the repository, create a virtual environment, and install dependencies from `requirements.txt`.</p>
             <p class="justify-text">For detailed step-by-step instructions, please see the <a href="https://github.com/alejo2193/Quantifying_Fairness_in_Spatial_Predictive_Policing_Repository/blob/main/README.md#installation" target="_blank">Installation Guide in the README.md</a>.</p>
-            </section>
+        </section>
 
         <section id="results">
             <h2>Results</h2>
             <div class="justify-text">
                 <p>The results, including metrics, visualizations, and predictions, are stored in the <code>Data/</code> folder, organized by city. These allow for examination of model performance, prediction distribution, and fairness metrics comparisons.</p>
+            </div>
+
+            <div class="videos-results-container">
+                <div class="video-item">
+                    <video controls autoplay loop muted playsinline>
+                        <source src="Images/crime_heatmap_bogota.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                    <p>Crime Heatmap Bogotá</p>
                 </div>
+                <div class="video-item">
+                    <video controls autoplay loop muted playsinline>
+                        <source src="Images/crime_heatmap_chicago.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                    <p>Crime Heatmap Chicago</p>
+                </div>
+            </div>
+
+            <div class="figure-item">
+                <img src="Images/fig4.png" alt="Max-min and Gini metrics for fairness evaluation">
+                <p class="figure-caption"><strong>Figure 4:</strong> Max-min and Gini metrics for fairness evaluation in Bogotá and Chicago. Each point along the X-axis represents the percentage of area analyzed in each group relative to the total predictions. Along the Y-axis, the Max-min metric represents the disparity in benefits, while the Gini metric represents the percentage of this benefit disparity. These metrics are depicted for each model under evaluation.</p>
+            </div>
+
+            <div class="figure-item">
+                <img src="Images/fig5.png" alt="Trend of classification precision for patrolled and non-patrolled areas">
+                <p class="figure-caption"><strong>Figure 5:</strong> Trend of classification precision for patrolled and non-patrolled areas across a specific percentage range of the total coverage area (1% to 30%, simulating real scenarios) in each model for $G_1$ and $G_2$ from predictions in Chicago and Bogotá.</p>
+            </div>
+
         </section>
 
         <section id="license">
