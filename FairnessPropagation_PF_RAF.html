@@ -1,245 +1,229 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.5">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantifying Fairness in Spatial Predictive Policing</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* También puedes poner estilos CSS aquí directamente */
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4; /* Un color de fondo suave */
+            color: #333;
+        }
+        .container {
+            max-width: 900px; /* Ancho máximo del contenido */
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        /* Estilo para la imagen como en tu README */
+        .image-container {
+            background-color: white;
+            display: inline-block; /* O block si quieres que ocupe todo el ancho */
+            padding: 10px;
+            text-align: center; /* Para centrar la imagen si es inline-block */
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            max-width: 100%; /* Hace la imagen responsiva */
+            height: auto;
+        }
+        .badges img {
+            margin-right: 5px; /* Espacio entre badges */
+        }
+        /* Para el texto justificado */
+        .justify-text {
+            text-align: justify;
+        }
+        pre {
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto; /* Para scroll horizontal en bloques de código largos */
+        }
+        code {
+            font-family: monospace;
+        }
+        /* Estilos para la Tabla de Contenidos */
+        .table-of-contents ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .table-of-contents li a {
+            text-decoration: none;
+            color: #007bff; /* Color azul típico de enlaces */
+        }
+        .table-of-contents li a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="es"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Quantifying Fairness in Spatial Predictive Policing&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="stylesheet" href="style.css"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* También puedes poner estilos CSS aquí directamente */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.6;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f4f4f4; /* Un color de fondo suave */</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #333;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.container {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 900px; /* Ancho máximo del contenido */</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: white;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 0 10px rgba(0,0,0,0.1);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>h1, h2, h3 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #333;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Estilo para la imagen como en tu README */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.image-container {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: white;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: inline-block; /* O block si quieres que ocupe todo el ancho */</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center; /* Para centrar la imagen si es inline-block */</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.image-container img {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 100%; /* Hace la imagen responsiva */</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: auto;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.badges img {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-right: 5px; /* Espacio entre badges */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Para el texto justificado */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.justify-text {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: justify;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>pre {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #eee;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 5px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>overflow-x: auto; /* Para scroll horizontal en bloques de código largos */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>code {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: monospace;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Estilos para la Tabla de Contenidos */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.table-of-contents ul {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>list-style-type: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding-left: 0;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.table-of-contents li a {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #007bff; /* Color azul típico de enlaces */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.table-of-contents li a:hover {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-decoration: underline;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Quantifying Fairness in Spatial Predictive Policing&lt;/h1&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="image-container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;img src="fig2.png" alt="Figura 2" width="700"/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="justify-text"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Fairness pipeline for Prediction Fairness (PF) and Resource Allocation Fairness (RAF): it starts by defining evaluation groups and comparing predicted and actual crime probabilities. Selected areas are analyzed under resource constraints. PF metrics are computed using error functions, such as $f(M, G1*) = |0.5 - 0.0| = 0.5$, and disparities are measured using Max-min and Gini. RAF fairness is then assessed through precision metrics derived from confusion matrices, e.g., $precision(M, G1*) = 0, precision(M, G2*) = 1$.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="badges"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;img src="https://img.shields.io/badge/Status-In%20Development-yellow" alt="Status Badge"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;img src="https://img.shields.io/badge/License-MIT-blue" alt="License Badge"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;img src="https://img.shields.io/badge/Version-1.0.0-informational" alt="Version Badge"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="justify-text"&gt;This repository contains the code used to develop the research presented in the paper &lt;strong&gt;"Quantifying Fairness in Spatial Predictive Policing"&lt;/strong&gt;. The project implements and evaluates spatial predictive models (SEPP, KDE, Naive KDE) on crime data from Bogotá and Chicago, focusing on quantifying and analyzing the fairness of predictions in different regions.&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;nav class="table-of-contents"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Table of Contents&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#about-the-project"&gt;About the Project&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#algorithms-used"&gt;Algorithms Used&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#project-structure"&gt;Project Structure&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#installation"&gt;Installation&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;a href="#prerequisites"&gt;Prerequisites&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;a href="#installation-steps"&gt;Installation Steps&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#running-the-code"&gt;Running the Code&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#usage-examples"&gt;Usage Examples&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#results"&gt;Results&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#license"&gt;License&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#references"&gt;References&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/nav&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="about-the-project"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;About the Project&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="justify-text"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;This project addresses the growing concern about fairness in spatial crime prediction systems. We implement and compare the performance and fairness of three predictive models: &lt;strong&gt;SEPP&lt;/strong&gt;, &lt;strong&gt;KDE&lt;/strong&gt; (Kernel Density Estimation), and &lt;strong&gt;Naive KDE&lt;/strong&gt; (a simple baseline).&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;The research is conducted using real crime data from two distinct cities, Bogotá and Chicago, each with its own spatial and socioeconomic characteristics that influence the definition of protected/unprotected regions. The code allows replicating the data processing, model simulation with sliding time windows, and the application of fairness metrics to evaluate the results.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="algorithms-used"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Algorithms Used&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="justify-text"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;The predictive algorithms implemented in this work are:&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;&lt;strong&gt;SEPP (Self-Exciting Point Process):&lt;/strong&gt; A model that considers both the history of past events and the influence of recent events to predict the probability of future events.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;&lt;strong&gt;KDE (Kernel Density Estimation):&lt;/strong&gt; A non-parametric method for estimating the probability density function of a random variable, used here to estimate the spatial intensity of crimes.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;&lt;strong&gt;Naive KDE:&lt;/strong&gt; A simplified version of KDE, often used as a baseline.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;These models were implemented using base code developed by the &lt;strong&gt;QuantCrime Lab&lt;/strong&gt; at the University of Leeds, available at: &lt;a href="https://github.com/QuantCrimAtLeeds/PredictCode" target="_blank"&gt;https://github.com/QuantCrimAtLeeds/PredictCode&lt;/a&gt;.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="project-structure"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Project Structure&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;The project directory structure is organized as follows to manage data, scripts, and custom libraries:&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;pre&gt;&lt;code&gt;.</p>
-<p class="p1">├── Experiment_Scripts/ # Experimental scripts with real data from Bogota and Chicago (Jupyter Notebooks)</p>
-<p class="p1">├── Librerias/<span class="Apple-converted-space">          </span># Custom libraries and functions</p>
-<p class="p1">│ <span class="Apple-converted-space">  </span>├── fairness_measures/</p>
-<p class="p1">│ <span class="Apple-converted-space">  </span>├── model/</p>
-<p class="p1">│ <span class="Apple-converted-space">  </span>├── predictCode/<span class="Apple-converted-space">    </span># Base code from University of Leeds</p>
-<p class="p1">│ <span class="Apple-converted-space">  </span>└── robust_predict/</p>
-<p class="p1">├── Examples/ <span class="Apple-converted-space">          </span># Examples demonstrating model usage based on simulations</p>
-<p class="p1">├── Data/ <span class="Apple-converted-space">              </span># Stores all raw, processed data, and results</p>
-<p class="p1">│ <span class="Apple-converted-space">  </span>├── BOGOTA/</p>
-<p class="p1">│ <span class="Apple-converted-space">  </span>└── CHICAGO/</p>
-<p class="p1">├── global_vars.py<span class="Apple-converted-space">      </span># Global configuration variables</p>
-<p class="p1">├── .gitignore<span class="Apple-converted-space">          </span># File to ignore files and directories in Git</p>
-<p class="p1">├── LICENSE <span class="Apple-converted-space">            </span># License file</p>
-<p class="p1">└── README.md <span class="Apple-converted-space">          </span># This file&lt;/code&gt;&lt;/pre&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;strong&gt;Experiment_Scripts:&lt;/strong&gt; This folder contains the experimental scripts using real data from Bogota and Chicago. These are primarily Jupyter notebooks (&lt;code&gt;.ipynb&lt;/code&gt;) located directly within this folder, without subdirectories for cities.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;strong&gt;Librerias:&lt;/strong&gt; This folder stores the code for custom libraries and functions developed for training models and calculating model fit metrics for fairness and performance... (continúa con el resto de la descripción)&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="installation"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Installation&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;To set up the project locally, follow these steps:&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3 id="prerequisites"&gt;Prerequisites&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Ensure you have the following installed:&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;strong&gt;Python 3.7+&lt;/strong&gt; (Python 3.8 or higher is recommended)&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;strong&gt;pip&lt;/strong&gt; (Python package installer)&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;strong&gt;git&lt;/strong&gt; (version control system)&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;An environment to run Jupyter notebooks (e.g., Jupyter Notebook, JupyterLab, VS Code with Python/Jupyter extension).&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/ul&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3 id="installation-steps"&gt;Installation Steps&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;ol&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;strong&gt;Clone the repository:&lt;/strong&gt; Open your terminal or command prompt and run:</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;pre&gt;&lt;code&gt;git clone https://github.com/alejo2193/Quantifying_Fairness_in_Spatial_Predictive_Policing_Repository.git&lt;/code&gt;&lt;/pre&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;strong&gt;Navigate to the project directory:&lt;/strong&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;pre&gt;&lt;code&gt;cd Quantifying_Fairness_in_Spatial_Predictive_Policing_Repository&lt;/code&gt;&lt;/pre&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;strong&gt;Create a virtual environment (recommended):&lt;/strong&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;pre&gt;&lt;code&gt;python -m venv venv&lt;/code&gt;&lt;/pre&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>Activate the virtual environment:</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;pre&gt;&lt;code&gt;# On macOS/Linux</p>
-<p class="p1">source venv/bin/activate</p>
-<p class="p2"><br></p>
-<p class="p1"># On Windows</p>
-<p class="p1">.\venv\Scripts\activate&lt;/code&gt;&lt;/pre&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;strong&gt;Install dependencies:&lt;/strong&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;pre&gt;&lt;code&gt;pip install -r requirements.txt&lt;/code&gt;&lt;/pre&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;You can generate it automatically if you already have the dependencies installed in an environment: &lt;code&gt;pip freeze &gt; requirements.txt&lt;/code&gt;.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/ol&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="running-the-code"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Running the Code&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="usage-examples"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Usage Examples&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="results"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Results&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="license"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;License&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;This project is licensed under the &lt;strong&gt;MIT License&lt;/strong&gt;.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="references"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;References&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;strong&gt;Paper:&lt;/strong&gt; "Quantifying Fairness in Spatial Predictive Policing" (Include link or full citation to the paper when available).&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;strong&gt;open_cp base code:&lt;/strong&gt; QuantCrime Lab at the University of Leeds repository: &lt;a href="https://github.com/QuantCrimAtLeeds/PredictCode" target="_blank"&gt;https://github.com/QuantCrimAtLeeds/PredictCode&lt;/a&gt;.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="contact"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Contact&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="justify-text"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;If you have questions, comments, or suggestions about this project or the paper, please contact:&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt; &lt;script type="text/javascript" id="MathJax-script" async</p>
-<p class="p1"><span class="Apple-converted-space">      </span>src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+    <div class="container">
+        <h1>Quantifying Fairness in Spatial Predictive Policing</h1>
+
+        <div class="image-container">
+          <img src="fig2.png" alt="Figura 2" width="700"/>
+        </div>
+
+        <div class="justify-text">
+            <p>Fairness pipeline for Prediction Fairness (PF) and Resource Allocation Fairness (RAF): it starts by defining evaluation groups and comparing predicted and actual crime probabilities. Selected areas are analyzed under resource constraints. PF metrics are computed using error functions, such as $f(M, G1*) = |0.5 - 0.0| = 0.5$, and disparities are measured using Max-min and Gini. RAF fairness is then assessed through precision metrics derived from confusion matrices, e.g., $precision(M, G1*) = 0, precision(M, G2*) = 1$.</p>
+        </div>
+
+        <div class="badges">
+            <img src="https://img.shields.io/badge/Status-In%20Development-yellow" alt="Status Badge">
+            <img src="https://img.shields.io/badge/License-MIT-blue" alt="License Badge">
+            <img src="https://img.shields.io/badge/Version-1.0.0-informational" alt="Version Badge">
+        </div>
+
+        <p class="justify-text">This repository contains the code used to develop the research presented in the paper <strong>"Quantifying Fairness in Spatial Predictive Policing"</strong>. The project implements and evaluates spatial predictive models (SEPP, KDE, Naive KDE) on crime data from Bogotá and Chicago, focusing on quantifying and analyzing the fairness of predictions in different regions.</p>
+
+        <nav class="table-of-contents">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#about-the-project">About the Project</a></li>
+                <li><a href="#algorithms-used">Algorithms Used</a></li>
+                <li><a href="#project-structure">Project Structure</a></li>
+                <li><a href="#installation">Installation</a>
+                    <ul>
+                        <li><a href="#prerequisites">Prerequisites</a></li>
+                        <li><a href="#installation-steps">Installation Steps</a></li>
+                    </ul>
+                </li>
+                <li><a href="#running-the-code">Running the Code</a></li>
+                <li><a href="#usage-examples">Usage Examples</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#license">License</a></li>
+                <li><a href="#references">References</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section id="about-the-project">
+            <h2>About the Project</h2>
+            <div class="justify-text">
+                <p>This project addresses the growing concern about fairness in spatial crime prediction systems. We implement and compare the performance and fairness of three predictive models: <strong>SEPP</strong>, <strong>KDE</strong> (Kernel Density Estimation), and <strong>Naive KDE</strong> (a simple baseline).</p>
+                <p>The research is conducted using real crime data from two distinct cities, Bogotá and Chicago, each with its own spatial and socioeconomic characteristics that influence the definition of protected/unprotected regions. The code allows replicating the data processing, model simulation with sliding time windows, and the application of fairness metrics to evaluate the results.</p>
+            </div>
+        </section>
+
+        <section id="algorithms-used">
+            <h2>Algorithms Used</h2>
+            <div class="justify-text">
+                <p>The predictive algorithms implemented in this work are:</p>
+                <ul>
+                    <li><strong>SEPP (Self-Exciting Point Process):</strong> A model that considers both the history of past events and the influence of recent events to predict the probability of future events.</li>
+                    <li><strong>KDE (Kernel Density Estimation):</strong> A non-parametric method for estimating the probability density function of a random variable, used here to estimate the spatial intensity of crimes.</li>
+                    <li><strong>Naive KDE:</strong> A simplified version of KDE, often used as a baseline.</li>
+                </ul>
+                <p>These models were implemented using base code developed by the <strong>QuantCrime Lab</strong> at the University of Leeds, available at: <a href="https://github.com/QuantCrimAtLeeds/PredictCode" target="_blank">https://github.com/QuantCrimAtLeeds/PredictCode</a>.</p>
+            </div>
+        </section>
+
+        <section id="project-structure">
+            <h2>Project Structure</h2>
+            <p>The project directory structure is organized as follows to manage data, scripts, and custom libraries:</p>
+            <pre><code>.
+├── Experiment_Scripts/ # Experimental scripts with real data from Bogota and Chicago (Jupyter Notebooks)
+├── Librerias/          # Custom libraries and functions
+│   ├── fairness_measures/
+│   ├── model/
+│   ├── predictCode/    # Base code from University of Leeds
+│   └── robust_predict/
+├── Examples/           # Examples demonstrating model usage based on simulations
+├── Data/               # Stores all raw, processed data, and results
+│   ├── BOGOTA/
+│   └── CHICAGO/
+├── global_vars.py      # Global configuration variables
+├── .gitignore          # File to ignore files and directories in Git
+├── LICENSE             # License file
+└── README.md           # This file</code></pre>
+            <ul>
+                <li><strong>Experiment_Scripts:</strong> This folder contains the experimental scripts using real data from Bogota and Chicago. These are primarily Jupyter notebooks (<code>.ipynb</code>) located directly within this folder, without subdirectories for cities.</li>
+                <li><strong>Librerias:</strong> This folder stores the code for custom libraries and functions developed for training models and calculating model fit metrics for fairness and performance... (continúa con el resto de la descripción)</li>
+            </ul>
+        </section>
+
+        <section id="installation">
+            <h2>Installation</h2>
+            <p>To set up the project locally, follow these steps:</p>
+
+            <h3 id="prerequisites">Prerequisites</h3>
+            <p>Ensure you have the following installed:</p>
+            <ul>
+                <li><strong>Python 3.7+</strong> (Python 3.8 or higher is recommended)</li>
+                <li><strong>pip</strong> (Python package installer)</li>
+                <li><strong>git</strong> (version control system)</li>
+                <li>An environment to run Jupyter notebooks (e.g., Jupyter Notebook, JupyterLab, VS Code with Python/Jupyter extension).</li>
+            </ul>
+
+            <h3 id="installation-steps">Installation Steps</h3>
+            <ol>
+                <li><strong>Clone the repository:</strong> Open your terminal or command prompt and run:
+                    <pre><code>git clone https://github.com/alejo2193/Quantifying_Fairness_in_Spatial_Predictive_Policing_Repository.git</code></pre>
+                </li>
+                <li><strong>Navigate to the project directory:</strong>
+                    <pre><code>cd Quantifying_Fairness_in_Spatial_Predictive_Policing_Repository</code></pre>
+                </li>
+                <li><strong>Create a virtual environment (recommended):</strong>
+                    <pre><code>python -m venv venv</code></pre>
+                    Activate the virtual environment:
+                    <pre><code># On macOS/Linux
+source venv/bin/activate
+
+# On Windows
+.\venv\Scripts\activate</code></pre>
+                </li>
+                <li><strong>Install dependencies:</strong>
+                    <pre><code>pip install -r requirements.txt</code></pre>
+                    <p>You can generate it automatically if you already have the dependencies installed in an environment: <code>pip freeze > requirements.txt</code>.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section id="running-the-code">
+            <h2>Running the Code</h2>
+            </section>
+
+        <section id="usage-examples">
+            <h2>Usage Examples</h2>
+            </section>
+
+        <section id="results">
+            <h2>Results</h2>
+            </section>
+
+        <section id="license">
+            <h2>License</h2>
+            <p>This project is licensed under the <strong>MIT License</strong>.</p>
+        </section>
+
+        <section id="references">
+            <h2>References</h2>
+            <ul>
+                <li><strong>Paper:</strong> "Quantifying Fairness in Spatial Predictive Policing" (Include link or full citation to the paper when available).</li>
+                <li><strong>open_cp base code:</strong> QuantCrime Lab at the University of Leeds repository: <a href="https://github.com/QuantCrimAtLeeds/PredictCode" target="_blank">https://github.com/QuantCrimAtLeeds/PredictCode</a>.</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="justify-text">
+                <p>If you have questions, comments, or suggestions about this project or the paper, please contact:</p>
+                </div>
+        </section>
+
+    </div> <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
 </body>
 </html>
