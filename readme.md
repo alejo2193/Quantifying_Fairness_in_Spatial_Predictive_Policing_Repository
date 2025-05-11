@@ -101,7 +101,7 @@ Ensure you have the following installed:
 1.  **Clone the repository:** Open your terminal or command prompt and run:
 
     ```bash
-    git clone [https://github.com/alejo2193/Quantifying_Fairness_in_Spatial_Predictive_Policing_Repository.git](https://github.com/alejo2193/Quantifying_Fairness_in_Spatial_Predictive_Policing_Repository.git)
+    git clone [https://github.com/dieahernandezcas/Quantifying_Fairness_in_Spatial_Predictive_Policing_Repository.git](https://github.com/dieahernandezcas/Quantifying_Fairness_in_Spatial_Predictive_Policing_Repository.git)
     ```
 
 2.  **Navigate to the project directory:**
