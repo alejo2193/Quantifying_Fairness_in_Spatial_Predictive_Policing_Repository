@@ -4,79 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quantifying Fairness in Spatial Predictive Policing</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* También puedes poner estilos CSS aquí directamente */
+    <link rel="stylesheet" href="style.css"> <style>
         body {
             font-family: sans-serif;
             line-height: 1.6;
-            margin: 20px;
-            background-color: #f4f4f4; /* Un color de fondo suave */
+            margin: 0; /* Quitar margen por defecto del body */
+            padding: 0; /* Quitar padding por defecto del body */
+            background-color: #f4f4f4;
             color: #333;
+        }
+        .top-bar { /* Barra superior para el título y enlace al repo */
+            background-color: #333;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+        }
+        .top-bar h1 {
+            margin: 0;
+            font-size: 2em;
+            color: white;
         }
         .container {
-            max-width: 900px; /* Ancho máximo del contenido */
-            margin: auto;
+            max-width: 900px;
+            margin: 20px auto; /* Margen arriba/abajo y centrado horizontal */
             background: white;
-            padding: 20px;
+            padding: 25px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
         }
-        h1, h2, h3 {
+        h2, h3 {
             color: #333;
+            border-bottom: 1px solid #eee; /* Línea sutil bajo los subtítulos */
+            padding-bottom: 5px;
         }
-        /* Estilo para la imagen como en tu README */
         .image-container {
             background-color: white;
-            display: inline-block; /* O block si quieres que ocupe todo el ancho */
+            display: block; /* Centrado más fácil */
             padding: 10px;
-            text-align: center; /* Para centrar la imagen si es inline-block */
+            text-align: center;
             margin-bottom: 20px;
         }
         .image-container img {
-            max-width: 100%; /* Hace la imagen responsiva */
+            max-width: 100%;
             height: auto;
+            border: 1px solid #ddd; /* Borde sutil para la imagen */
+            border-radius: 4px;
+        }
+        .badges {
+            text-align: center; /* Centrar badges */
+            margin-bottom: 15px;
         }
         .badges img {
-            margin-right: 5px; /* Espacio entre badges */
+            margin: 0 5px;
         }
-        /* Para el texto justificado */
+        .repo-link-container {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .repo-link {
+            display: inline-block;
+            background-color: #007bff; /* Azul GitHub */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .repo-link:hover {
+            background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+            color: white;
+        }
         .justify-text {
             text-align: justify;
         }
         pre {
-            background-color: #eee;
-            padding: 10px;
+            background-color: #f9f9f9; /* Un gris más claro para el código */
+            padding: 15px;
             border-radius: 5px;
-            overflow-x: auto; /* Para scroll horizontal en bloques de código largos */
+            overflow-x: auto;
+            border: 1px solid #eee;
         }
         code {
             font-family: monospace;
+            background-color: #eef; /* Color de fondo sutil para código inline */
+            padding: 2px 4px;
+            border-radius: 3px;
         }
-        /* Estilos para la Tabla de Contenidos */
+        .table-of-contents {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
         .table-of-contents ul {
             list-style-type: none;
             padding-left: 0;
         }
         .table-of-contents li a {
             text-decoration: none;
-            color: #007bff; /* Color azul típico de enlaces */
+            color: #007bff;
         }
         .table-of-contents li a:hover {
             text-decoration: underline;
         }
+        section {
+            margin-bottom: 30px; /* Más espacio entre secciones */
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+
+    <div class="top-bar">
         <h1>Quantifying Fairness in Spatial Predictive Policing</h1>
+    </div>
+
+    <div class="container">
 
         <div class="image-container">
           <img src="fig2.png" alt="Figura 2" width="700"/>
-        </div>
-
-        <div class="justify-text">
-            <p>Fairness pipeline for Prediction Fairness (PF) and Resource Allocation Fairness (RAF): it starts by defining evaluation groups and comparing predicted and actual crime probabilities. Selected areas are analyzed under resource constraints. PF metrics are computed using error functions, such as $f(M, G1*) = |0.5 - 0.0| = 0.5$, and disparities are measured using Max-min and Gini. RAF fairness is then assessed through precision metrics derived from confusion matrices, e.g., $precision(M, G1*) = 0, precision(M, G2*) = 1$.</p>
         </div>
 
         <div class="badges">
@@ -85,7 +131,16 @@
             <img src="https://img.shields.io/badge/Version-1.0.0-informational" alt="Version Badge">
         </div>
 
-        <p class="justify-text">This repository contains the code used to develop the research presented in the paper <strong>"Quantifying Fairness in Spatial Predictive Policing"</strong>. The project implements and evaluates spatial predictive models (SEPP, KDE, Naive KDE) on crime data from Bogotá and Chicago, focusing on quantifying and analyzing the fairness of predictions in different regions.</p>
+        <div class="repo-link-container">
+            <a href="https://github.com/alejo2193/Quantifying_Fairness_in_Spatial_Predictive_Policing_Repository" target="_blank" class="repo-link">
+                Ver Repositorio en GitHub
+            </a>
+        </div>
+
+        <div class="justify-text">
+            <p>Fairness pipeline for Prediction Fairness (PF) and Resource Allocation Fairness (RAF): it starts by defining evaluation groups and comparing predicted and actual crime probabilities. Selected areas are analyzed under resource constraints. PF metrics are computed using error functions, such as $f(M, G1*) = |0.5 - 0.0| = 0.5$, and disparities are measured using Max-min and Gini. RAF fairness is then assessed through precision metrics derived from confusion matrices, e.g., $precision(M, G1*) = 0, precision(M, G2*) = 1$.</p>
+            <p>This repository contains the code used to develop the research presented in the paper <strong>"Quantifying Fairness in Spatial Predictive Policing"</strong>. The project implements and evaluates spatial predictive models (SEPP, KDE, Naive KDE) on crime data from Bogotá and Chicago, focusing on quantifying and analyzing the fairness of predictions in different regions.</p>
+        </div>
 
         <nav class="table-of-contents">
             <h2>Table of Contents</h2>
@@ -93,19 +148,11 @@
                 <li><a href="#about-the-project">About the Project</a></li>
                 <li><a href="#algorithms-used">Algorithms Used</a></li>
                 <li><a href="#project-structure">Project Structure</a></li>
-                <li><a href="#installation">Installation</a>
-                    <ul>
-                        <li><a href="#prerequisites">Prerequisites</a></li>
-                        <li><a href="#installation-steps">Installation Steps</a></li>
-                    </ul>
-                </li>
-                <li><a href="#running-the-code">Running the Code</a></li>
-                <li><a href="#usage-examples">Usage Examples</a></li>
+                <li><a href="#installation">Installation</a></li>
                 <li><a href="#results">Results</a></li>
-                <li><a href="#license">License</a></li>
                 <li><a href="#references">References</a></li>
                 <li><a href="#contact">Contact</a></li>
-            </ul>
+                </ul>
         </nav>
 
         <section id="about-the-project">
@@ -119,110 +166,60 @@
         <section id="algorithms-used">
             <h2>Algorithms Used</h2>
             <div class="justify-text">
-                <p>The predictive algorithms implemented in this work are:</p>
-                <ul>
-                    <li><strong>SEPP (Self-Exciting Point Process):</strong> A model that considers both the history of past events and the influence of recent events to predict the probability of future events.</li>
-                    <li><strong>KDE (Kernel Density Estimation):</strong> A non-parametric method for estimating the probability density function of a random variable, used here to estimate the spatial intensity of crimes.</li>
-                    <li><strong>Naive KDE:</strong> A simplified version of KDE, often used as a baseline.</li>
-                </ul>
-                <p>These models were implemented using base code developed by the <strong>QuantCrime Lab</strong> at the University of Leeds, available at: <a href="https://github.com/QuantCrimAtLeeds/PredictCode" target="_blank">https://github.com/QuantCrimAtLeeds/PredictCode</a>.</p>
-            </div>
+                <p>The predictive algorithms implemented are <strong>SEPP</strong>, <strong>KDE</strong>, and <strong>Naive KDE</strong>. These models were implemented using base code developed by the <strong>QuantCrime Lab</strong> at the University of Leeds, available at: <a href="https://github.com/QuantCrimAtLeeds/PredictCode" target="_blank">https://github.com/QuantCrimAtLeeds/PredictCode</a>.</p>
+                </div>
         </section>
 
         <section id="project-structure">
             <h2>Project Structure</h2>
-            <p>The project directory structure is organized as follows to manage data, scripts, and custom libraries:</p>
+            <p>The project is organized into key folders for experimental scripts, custom libraries (including base code from University of Leeds), examples, and data (raw, processed, results for Bogotá and Chicago). A global configuration file manages variables across scripts.</p>
             <pre><code>.
-├── Experiment_Scripts/ # Experimental scripts with real data from Bogota and Chicago (Jupyter Notebooks)
-├── Librerias/          # Custom libraries and functions
-│   ├── fairness_measures/
-│   ├── model/
-│   ├── predictCode/    # Base code from University of Leeds
-│   └── robust_predict/
-├── Examples/           # Examples demonstrating model usage based on simulations
-├── Data/               # Stores all raw, processed data, and results
-│   ├── BOGOTA/
-│   └── CHICAGO/
-├── global_vars.py      # Global configuration variables
-├── .gitignore          # File to ignore files and directories in Git
-├── LICENSE             # License file
-└── README.md           # This file</code></pre>
-            <ul>
-                <li><strong>Experiment_Scripts:</strong> This folder contains the experimental scripts using real data from Bogota and Chicago. These are primarily Jupyter notebooks (<code>.ipynb</code>) located directly within this folder, without subdirectories for cities.</li>
-                <li><strong>Librerias:</strong> This folder stores the code for custom libraries and functions developed for training models and calculating model fit metrics for fairness and performance... (continúa con el resto de la descripción)</li>
-            </ul>
-        </section>
+├── Experiment_Scripts/ 
+├── Librerias/          
+├── Examples/           
+├── Data/               
+├── global_vars.py      
+└── README.md</code></pre>
+            <p class="justify-text">For a detailed breakdown of each folder and its contents, please refer to the <a href="https://github.com/alejo2193/Quantifying_Fairness_in_Spatial_Predictive_Policing_Repository/blob/main/README.md#project-structure" target="_blank">Project Structure section in the README.md</a>.</p>
+            </section>
 
         <section id="installation">
             <h2>Installation</h2>
-            <p>To set up the project locally, follow these steps:</p>
-
-            <h3 id="prerequisites">Prerequisites</h3>
-            <p>Ensure you have the following installed:</p>
-            <ul>
-                <li><strong>Python 3.7+</strong> (Python 3.8 or higher is recommended)</li>
-                <li><strong>pip</strong> (Python package installer)</li>
-                <li><strong>git</strong> (version control system)</li>
-                <li>An environment to run Jupyter notebooks (e.g., Jupyter Notebook, JupyterLab, VS Code with Python/Jupyter extension).</li>
-            </ul>
-
-            <h3 id="installation-steps">Installation Steps</h3>
-            <ol>
-                <li><strong>Clone the repository:</strong> Open your terminal or command prompt and run:
-                    <pre><code>git clone https://github.com/alejo2193/Quantifying_Fairness_in_Spatial_Predictive_Policing_Repository.git</code></pre>
-                </li>
-                <li><strong>Navigate to the project directory:</strong>
-                    <pre><code>cd Quantifying_Fairness_in_Spatial_Predictive_Policing_Repository</code></pre>
-                </li>
-                <li><strong>Create a virtual environment (recommended):</strong>
-                    <pre><code>python -m venv venv</code></pre>
-                    Activate the virtual environment:
-                    <pre><code># On macOS/Linux
-source venv/bin/activate
-
-# On Windows
-.\venv\Scripts\activate</code></pre>
-                </li>
-                <li><strong>Install dependencies:</strong>
-                    <pre><code>pip install -r requirements.txt</code></pre>
-                    <p>You can generate it automatically if you already have the dependencies installed in an environment: <code>pip freeze > requirements.txt</code>.</p>
-                </li>
-            </ol>
-        </section>
-
-        <section id="running-the-code">
-            <h2>Running the Code</h2>
-            </section>
-
-        <section id="usage-examples">
-            <h2>Usage Examples</h2>
+            <p class="justify-text">To set up the project locally, ensure you have Python 3.7+, pip, and git. Then, clone the repository, create a virtual environment, and install dependencies from `requirements.txt`.</p>
+            <p class="justify-text">For detailed step-by-step instructions, please see the <a href="https://github.com/alejo2193/Quantifying_Fairness_in_Spatial_Predictive_Policing_Repository/blob/main/README.md#installation" target="_blank">Installation Guide in the README.md</a>.</p>
             </section>
 
         <section id="results">
             <h2>Results</h2>
-            </section>
+            <div class="justify-text">
+                <p>The results, including metrics, visualizations, and predictions, are stored in the <code>Data/</code> folder, organized by city. These allow for examination of model performance, prediction distribution, and fairness metrics comparisons.</p>
+                </div>
+        </section>
 
         <section id="license">
             <h2>License</h2>
-            <p>This project is licensed under the <strong>MIT License</strong>.</p>
+            <p>This project is licensed under the <strong>MIT License</strong>.
+            <a href="https://github.com/alejo2193/Quantifying_Fairness_in_Spatial_Predictive_Policing_Repository/blob/main/LICENSE" target="_blank">(View License File)</a></p>
         </section>
 
         <section id="references">
             <h2>References</h2>
             <ul>
-                <li><strong>Paper:</strong> "Quantifying Fairness in Spatial Predictive Policing" (Include link or full citation to the paper when available).</li>
-                <li><strong>open_cp base code:</strong> QuantCrime Lab at the University of Leeds repository: <a href="https://github.com/QuantCrimAtLeeds/PredictCode" target="_blank">https://github.com/QuantCrimAtLeeds/PredictCode</a>.</li>
+                <li><strong>Paper:</strong> "Quantifying Fairness in Spatial Predictive Policing" (Link to paper if available).</li>
+                <li><strong>open_cp base code:</strong> <a href="https://github.com/QuantCrimAtLeeds/PredictCode" target="_blank">QuantCrime Lab - PredictCode</a>.</li>
             </ul>
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
             <div class="justify-text">
-                <p>If you have questions, comments, or suggestions about this project or the paper, please contact:</p>
-                </div>
+                <p>If you have questions, comments, or suggestions, please contact: [Tu Nombre/Email o enlace a Issues del repo]</p>
+            </div>
         </section>
 
-    </div> <script type="text/javascript" id="MathJax-script" async
+    </div>
+
+    <script type="text/javascript" id="MathJax-script" async
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
 </body>
